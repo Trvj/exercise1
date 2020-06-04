@@ -1,4 +1,4 @@
-# Class: name
+# Class: exercise1
 #
 #
 class exercise1::packages {
