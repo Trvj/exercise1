@@ -1,0 +1,5 @@
+exercise1::user: Tra
+exercise1::packages:
+  - 'vim'
+  - 'epel-release'
+  - 'bash-completion
