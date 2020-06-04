@@ -1,0 +1,4 @@
+exercise1::packages:
+  - 'vim'
+  - 'epel-release'
+  - 'bash-completion'
