@@ -5,6 +5,8 @@ exercise1::packages:
   - 'wget'
   - 'nmap'
   - 'nfs-utils'
+  - 'net-tools'
+  - 'htop'
 
 exercise1::users:
     'Tra': 
@@ -13,9 +15,42 @@ exercise1::users:
       home:       '/home/Tra'
       managehome: 'true'
       name:       'Tra'
+      uid:         1010
+      password:   'Sensitive("Tra")'
     'Andrew': 
       ensure:     'present'
       groups:     'Andrews_Group'
       home:       '/home/Andrew'
       managehome: 'true'
       name:       'Andrew'
+      uid:         1009
+      password:   'Sensitive("Andrew")'
+    'Milton': 
+      ensure:     'present'
+      groups:     'Andrews_Group'
+      home:       '/home/Andrew'
+      managehome: 'true'
+      name:       'Andrew'
+      uid:         1011
+      password:   'Sensitive("Milton")'
+
+exercise1::lvm: 
+    'exercise.fs':     
+      ensure:     'present'
+      vg:         'exercisevg'
+      size:       '8G'
+
+exercise1::vg:    
+    'exercisevg':
+      ensure:     'present'
+      pv:         '/dev/sdb'
+
+exercise1::pv:    
+    'sdb1':
+      ensure:     'present'
+      
+exercise1::fs:    
+    '/dev/exercisevg/exercise.fs':
+      ensure:     'present'
+      fstype:     'XFS'
+      options:    '-b 4096 -E stride=32,stripe-width=64'
