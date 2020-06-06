@@ -7,9 +7,9 @@ class exercise1::disk_management::lvm {
 	$myUsers = hiera('exercise1::lvm', {})
 	# With Create Resource Converts a hash into a set of resources
 	create_resources(lvm, $lvm)
-}
 
-$mydir = hiera('exercise1::directory', {})
+
+ 	$mydir = hiera('exercise1::directory', {})
 	create_resources(file, $mydir)
 
 	mount { '/exercise':
@@ -21,4 +21,4 @@ $mydir = hiera('exercise1::directory', {})
 		device => '/dev/exercisevg/exercise.fs',
 		require => Filesystem['/dev/exercisevg/exercise.fs']
 	}
-}
+}		
