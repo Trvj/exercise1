@@ -3,7 +3,7 @@
 #
 class exercise1::users {
 	group { 'Andrews_Group':
-		gid => '1020',
+		gid => '2021',
 	}
 	# Create a hash from Hiera Data with the Users
 	$myUsers = hiera('exercise1::users', {})

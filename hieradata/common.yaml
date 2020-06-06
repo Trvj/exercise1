@@ -8,38 +8,12 @@ exercise1::packages:
   - 'net-tools'
   - 'htop'
 
-exercise1::users:
-    'Tra': 
-      ensure:     'present'
-      groups:     'Andrews_Group'
-      home:       '/home/Tra'
-      managehome: 'true'
-      name:       'Tra'
-      uid:         1010
-      password:   'Sensitive("Tra")'
-    'Andrew': 
-      ensure:     'present'
-      groups:     'Andrews_Group'
-      home:       '/home/Andrew'
-      managehome: 'true'
-      name:       'Andrew'
-      uid:         1009
-      password:   'Sensitive("Andrew")'
-    'Milton': 
-      ensure:     'present'
-      groups:     'Andrews_Group'
-      home:       '/home/Andrew'
-      managehome: 'true'
-      name:       'Andrew'
-      uid:         1011
-      password:   'Sensitive("Milton")'
-
 exercise1::lvm: 
     'exercise.fs':     
       ensure:     'present'
       vg:         'exercisevg'
       size:       '8G'
-
+      
 exercise1::vg:    
     'exercisevg':
       ensure:     'present'
