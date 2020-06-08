@@ -6,7 +6,7 @@ class exercise1::users {
 		gid => '2021',
 	}
 	# Create a hash from Hiera Data with the Users
-	$myUsers = hiera('exercise1::users', {})
+	$users = hiera('exercise1::users', {})
 	# With Create Resource Converts a hash into a set of resources
-	create_resources(user, $myUsers)
+	create_resources(user, $users)
 }
