@@ -29,3 +29,8 @@ exercise1::mountdir:
       owner:       'AndrewNP'
       group:       'Andrews_NPGroup'
       mode:        0775
+exercise1::groups:
+    'Andrews_NPGroup':
+      ensure:      'present'
+      name:        'Andrews_NPGroup'
+      gid:         2020

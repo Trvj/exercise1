@@ -33,9 +33,4 @@ exercise1::groups:
     'Andrews_PGroup':
       ensure:      'present'
       name:        'Andrews_PGroup'
-      gid:         2021
-
-
-
-
-             
+      gid:         2021           

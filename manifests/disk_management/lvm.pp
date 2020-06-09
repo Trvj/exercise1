@@ -7,3 +7,4 @@ class exercise1::disk_management::lvm {
 	$lvm = hiera('exercise1::lvm', {})
 	# With Create Resource Converts a hash into a set of resources
 	create_resources(lvm, $lvm)
+}
