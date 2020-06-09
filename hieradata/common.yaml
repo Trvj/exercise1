@@ -27,4 +27,3 @@ exercise1::fs:
     '/dev/exercisevg/exercise.fs':
       ensure:                'present'
       fs_type:               'XFS'
-      options:               '-b 4096 -E stride=32,stripe-width=64'
