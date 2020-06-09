@@ -1,7 +1,7 @@
 # Class: exercise1::disk_managment
 #
 #
-class exercise1::disk_managment::disk {
+class exercise1::disk_management::disk {
 
 	exec { "partition sdb1 on ${fqdn}":
 		command      => 'echo -e "n\np\n1\n\n\nt\n8e\nw" | fdisk /dev/sdb',
