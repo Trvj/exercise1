@@ -20,7 +20,7 @@ exercise1::vg:
       physical_volumes:     '/dev/sdb'
 
 exercise1::pv:    
-    'sdb1':
+    '/dev/sdb1':
       ensure:               'present'
       
 exercise1::fs:    
