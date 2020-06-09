@@ -24,6 +24,6 @@ exercise1::pv:
       ensure:               'present'
       
 exercise1::fs:    
-    '/dev/exercisevg/exercise.fs':
+    '/dev/mapper/exercisevg-exercise.fs':
       ensure:                'present'
       fs_type:               'XFS'
