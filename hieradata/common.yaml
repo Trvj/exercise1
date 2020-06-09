@@ -10,21 +10,21 @@ exercise1::packages:
 
 exercise1::lvm: 
     'exercise.fs':     
-      ensure:     'present'
-      vg:         'exercisevg'
-      size:       '8G'
+      ensure:               'present'
+      volume_group:         'exercisevg'
+      size:                 '8G'
       
 exercise1::vg:    
     'exercisevg':
-      ensure:     'present'
-      pv:         '/dev/sdb'
+      ensure:               'present'
+      physical_volumes:     '/dev/sdb'
 
 exercise1::pv:    
     'sdb1':
-      ensure:     'present'
+      ensure:               'present'
       
 exercise1::fs:    
     '/dev/exercisevg/exercise.fs':
-      ensure:     'present'
-      fstype:     'XFS'
-      options:    '-b 4096 -E stride=32,stripe-width=64'
+      ensure:                'present'
+      fs_type:               'XFS'
+      options:               '-b 4096 -E stride=32,stripe-width=64'
