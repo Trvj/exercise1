@@ -6,5 +6,5 @@ class exercise1::disk_management::lvm {
 	# Create a hash from Hiera Data with the Users
 	$lvm = hiera('exercise1::lvm', {})
 	# With Create Resource Converts a hash into a set of resources
-	create_resources(lvm, $lvm)
+	create_resources(logical_volume, $lvm)
 }

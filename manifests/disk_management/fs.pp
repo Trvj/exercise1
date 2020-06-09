@@ -6,5 +6,5 @@ class exercise1::disk_management::fs {
 	# Create a hash from Hiera Data with the Users
 	$fs = hiera('exercise1::fs', {})
 	# With Create Resource Converts a hash into a set of resources
-	create_resources(fs, $fs)
+	create_resources(filesystem, $fs)
 }
