@@ -1,25 +1,31 @@
 exercise1::users:
     'Tranp': 
       ensure:     'present'
-      groups:     'Andrews_Group'
-      home:       '/home/Tra'
+      groups:     'Andrews_NPGroup'
+      home:       '/home/Tranp'
       managehome: 'true'
-      name:       'Tra'
-      uid:         1010
+      name:       'Tranp'
+      uid:         1020
       password:    $6$9X2uKbzKuaujN9.9$0uqotfz9UhD6LzL7TTTOn9J.k9lkwavqCoXIbmu.5o1E9Y/ZtWiI0MD0UND864AG/moIw9SvBqWhoL1/qKNiY/
     'Andrewnp': 
       ensure:     'present'
-      groups:     'Andrews_Group'
-      home:       '/home/Andrew'
+      groups:     'Andrews_NPGroup'
+      home:       '/home/Andrewnp'
       managehome: 'true'
-      name:       'Andrew'
-      uid:         1009
+      name:       'Andrewnp'
+      uid:         1019
       password:   $6$U0b/DJOZAySoFsFS$wLJruNePXgcxM6T6z6Bm0wP8o6/P9q9d3x3ut.AHqlyjWO3DsKGXlisK7wAU1a8j/f4jW0EtBD6ag5x2mDbk8/
     'Miltonnp': 
       ensure:     'present'
-      groups:     'Andrews_Group'
-      home:       '/home/Andrew'
+      groups:     'Andrews_NPGroup'
+      home:       '/home/Miltonnp'
       managehome: 'true'
-      name:       'Andrew'
-      uid:         1011
+      name:       'Miltonnp'
+      uid:         1031
       password:   $6$5Rv3c6S8OJE2MMWg$febzr3nA53bQeKr4lpgxl.mthXNfGJkfE57Rp6q4hTORjDvl/qLqtAi4lKeaHNXRcBS6MRDFHVIDycz.iLW5K0
+exercise1::mountdir:
+    '/exercise':
+      ensure:      'directory'
+      owner:       'AndrewNP'
+      group:       'Andrews_NPGroup'
+      mode:        0775
