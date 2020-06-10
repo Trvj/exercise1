@@ -1,5 +1,5 @@
 # Class: exercise1::users
-#
+#creating resources for groups and users
 #
 class exercise1::users {
 	$groups = hiera('exercise1::groups', {})

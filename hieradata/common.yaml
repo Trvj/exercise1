@@ -13,7 +13,11 @@ exercise1::lvm:
       ensure:               'present'
       volume_group:         'exercisevg'
       size:                 '8G'
-      
+    'exercise2.fs':
+      ensure:               'present'
+      volume_group:         'exercisevg'
+      size:                 '2G'
+
 exercise1::vg:    
     'exercisevg':
       ensure:               'present'
@@ -27,3 +31,22 @@ exercise1::fs:
     '/dev/mapper/exercisevg-exercise.fs':
       ensure:                'present'
       fs_type:               'xfs'
+    '/dev/mapper/exercisevg-exercise2.fs':
+      ensure:                'present'
+      fs_type:               'xfs'
+
+exercise1::mount:
+    '/exercise':
+      ensure:                 'mounted'
+      device:                 '/dev/mapper/exercisevg-exercise.fs'
+      fstype:                 'xfs'
+      pass:                   '0'
+      dump:                   '0'
+      options:                'defaults'
+    '/exercise2'
+      ensure:                 'mounted'
+      device:                 '/dev/mapper/exercisevg-exercise2.fs'
+      fstype:                 'xfs'
+      pass:                   '0'
+      dump:                   '0'
+      options:                'defaults'
