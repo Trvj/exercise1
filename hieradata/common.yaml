@@ -43,7 +43,7 @@ exercise1::mount:
       pass:                   '0'
       dump:                   '0'
       options:                'defaults'
-    '/exercise2'
+    '/exercise2':
       ensure:                 'mounted'
       device:                 '/dev/mapper/exercisevg-exercise2.fs'
       fstype:                 'xfs'
