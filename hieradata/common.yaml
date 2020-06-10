@@ -16,7 +16,7 @@ exercise1::lvm:
     'exercise2.fs':
       ensure:               'present'
       volume_group:         'exercisevg'
-      size:                 '2G'
+      size:                 '1.9G'
 
 exercise1::vg:    
     'exercisevg':
