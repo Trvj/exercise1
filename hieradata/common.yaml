@@ -50,3 +50,5 @@ exercise1::mount:
       pass:                   '0'
       dump:                   '0'
       options:                'defaults'
+exercise1::nfs:
+    '/exercise'

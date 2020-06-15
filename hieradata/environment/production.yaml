@@ -39,3 +39,7 @@ exercise1::groups:
       ensure:      'present'
       name:        'Andrews_pGroup'
       gid:         2021           
+exercise1::nfsserver:
+    '/exercise':
+      ensure:                 'mounted'
+      clients:                '192.168.1.233(rw,sync)'
